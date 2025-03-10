@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    dfgdf
+    ОЙ
+    <a href="9.php">обратно</a>
 </body>
 </html>

@@ -1,15 +1,15 @@
 <?php
 session_start();
 
-// Устанавливаем first_visit_time при первом посещении
+
 if (!isset($_SESSION['first_visit_time'])) {
     $_SESSION['first_visit_time'] = time();
 }
 
-// Обновляем last_visit_time при каждом посещении
+
 $_SESSION['last_visit_time'] = time();
 
-// Выводим информацию о времени посещений
+
 $firstVisit = date('Y-m-d H:i:s', $_SESSION['first_visit_time']);
 $lastVisit = date('Y-m-d H:i:s', $_SESSION['last_visit_time']);
 

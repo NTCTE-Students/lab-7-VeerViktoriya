@@ -1,19 +1,21 @@
 <?php
-$cookie_loggedin = 'loggedin';
-setcookie($cookie_loggedin, time() + (3600*24));
-
+    $cookie_name = 'loggedin';
+    setcookie($cookie_name, '123');
 ?>
 <!DOCTYPE html>
-<html>
-	<body>
-		<?php
-			if (!isset($_COOKIE[$cookie_loggedin])) {
-			    print("Куки не установлены!");
-                echo "<script>self.location='to.php';</script>";
-			} else {
-			    print("Куки '{$cookie_loggedin}' установлены!<br>");
-			   
-			}
-		?>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+<body>
+    <?php 
+        if (!isset($_COOKIE[$cookie_name])) {
+            header('Location: 91.php');
+        } else {
+            print('Значения '. $_COOKIE[$cookie_name]);
+        }
+    ?>
+</body>
 </html>

@@ -1,21 +1,22 @@
 <?php
-
-$cookie_name = 'user';
-$cookie_value = 'admin';
-
-setcookie($cookie_name, $cookie_value, time() + (3600*24), '/');
-
+    $cookie_name = 'user';
+    	$cookie_value = 'admin';
+    	setcookie($cookie_name, $cookie_value, time() + (3600 * 24),'/', );
 ?>
 <!DOCTYPE html>
-<html>
-	<body>
-		<?php
-			if (!isset($_COOKIE[$cookie_name])) {
-			    print("Куки '{$cookie_name}' не установлены!");
-			} else {
-			    print("Куки '{$cookie_name}' установлены!<br>");
-				print('Значение: ' . $_COOKIE[$cookie_name]);
-			}
-		?>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <?php 
+        if (!isset($_COOKIE[$cookie_name])) {
+            print('Нет установленых куки');
+        } else {
+            print('Значения '. $_COOKIE[$cookie_name]);
+        }
+    ?>
+</body>
 </html>

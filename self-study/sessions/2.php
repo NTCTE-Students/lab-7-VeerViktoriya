@@ -3,15 +3,15 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Получение имени пользователя из формы
+    
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Установка переменной сессии
+
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
 
-    // Перенаправление на страницу приветствия
+
     header('Location: 21.php');
     exit();
 }
